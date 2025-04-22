@@ -1,0 +1,51 @@
+/* Блок "Галерея" */
+#gallery {
+    background-color: #fff;
+    padding: 60px 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.gallery-container {
+    max-width: 1200px;
+    text-align: center;
+}
+
+.gallery-container h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+/* Сетка галереи */
+.gallery-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+}
+
+.gallery-grid img {
+    width: calc(33.333% - 10px);
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.gallery-grid img:hover {
+    transform: scale(1.05);
+    opacity: 0.8;
+}
+
+/* Адаптивность */
+@media (max-width: 1024px) {
+    .gallery-grid img {
+        width: calc(50% - 10px);
+    }
+}
+
+@media (max-width: 600px) {
+    .gallery-grid img {
+        width: 100%;
+    }
+}
